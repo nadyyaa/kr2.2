@@ -1,0 +1,3 @@
+<ul>
+    <li *ngFor="let car of carlist|async"><a routerLink="/car/{{car.id}}" class="text-white">{{car.id}} {{car.brandName}} {{car.modelName}} {{car.priceInRub}}руб.</a> <a class="text-orange-600 ml-3 font-bold" routerLink="/editcar/{{car.id}}">Изменить</a> <button (click)="deletecar(car.id!)" >Удалить</button></li>
+</ul>
